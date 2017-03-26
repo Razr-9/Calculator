@@ -12,6 +12,7 @@
 		FD04A6D11E856F7E008FE5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD04A6CF1E856F7E008FE5A9 /* Main.storyboard */; };
 		FD04A6D31E856F7E008FE5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD04A6D21E856F7E008FE5A9 /* Assets.xcassets */; };
 		FD04A6D61E856F7E008FE5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD04A6D41E856F7E008FE5A9 /* LaunchScreen.storyboard */; };
+		FDF290F41E882332007BAE22 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF290F31E882332007BAE22 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FD04A6D21E856F7E008FE5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD04A6D51E856F7E008FE5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD04A6D71E856F7E008FE5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF290F31E882332007BAE22 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		FD04A6CA1E856F7E008FE5A9 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				FD04A6CB1E856F7E008FE5A9 /* AppDelegate.swift */,
+				FD04A6DD1E856F92008FE5A9 /* Supporting Files */,
 				FD04A6CD1E856F7E008FE5A9 /* ViewController.swift */,
 				FD04A6CF1E856F7E008FE5A9 /* Main.storyboard */,
+				FDF290F31E882332007BAE22 /* icon.png */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		FD04A6DD1E856F92008FE5A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD04A6CB1E856F7E008FE5A9 /* AppDelegate.swift */,
 				FD04A6D21E856F7E008FE5A9 /* Assets.xcassets */,
 				FD04A6D41E856F7E008FE5A9 /* LaunchScreen.storyboard */,
 				FD04A6D71E856F7E008FE5A9 /* Info.plist */,
 			);
-			path = Calculator;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF290F41E882332007BAE22 /* icon.png in Resources */,
 				FD04A6D61E856F7E008FE5A9 /* LaunchScreen.storyboard in Resources */,
 				FD04A6D31E856F7E008FE5A9 /* Assets.xcassets in Resources */,
 				FD04A6D11E856F7E008FE5A9 /* Main.storyboard in Resources */,
@@ -302,6 +314,7 @@
 				FD04A6DC1E856F7E008FE5A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
