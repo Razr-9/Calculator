@@ -52,77 +52,76 @@ class ViewController: UIViewController {
         }
     }
     
+    private var brain = CalculatorBrain()
     
     @IBAction func performOperation(_ sender: UIButton) {
-        userIsInTheMiddleOftyping = false
+        if userIsInTheMiddleOftyping {
+            brain.setOperand(displayValue)
+            userIsInTheMiddleOftyping = false
+        }
         if let mathematicalSymbol = sender.currentTitle {
-            switch mathematicalSymbol {
-            case "%":
-                displayValue = displayValue * 0.01
-            case "+/-":
-                displayValue = displayValue * -1
-            default:
-                break
-            }
+            brain.performOperation(mathematicalSymbol)
+        }
+        if let result = brain.result {
+            displayValue = result
         }
     }
     
-    @IBAction func operation(_ sender: UIButton) {
-        userIsInTheMiddleOftyping = false
-        if sign != "null" {
-            equal(sender)
-        }
-        if display.text != "ERROR" {
-            tem = displayValue
-        }
-        if let operationSymbol = sender.currentTitle {
-            switch operationSymbol {
-            case "+":
-                sign = "+"
-            case "–":
-                sign = "–"
-            case "x":
-                sign = "x"
-            case "÷":
-                sign = "÷"
-            default:
-                break
-            }
-        }
-    }
+//    @IBAction func operation(_ sender: UIButton) {
+//        userIsInTheMiddleOftyping = false
+//        if sign != "null" {
+//            equal(sender)
+//        }
+//        if display.text != "ERROR" {
+//            tem = displayValue
+//        }
+//        if let operationSymbol = sender.currentTitle {
+//            switch operationSymbol {
+//            case "+":
+//                sign = "+"
+//            case "–":
+//                sign = "–"
+//            case "x":
+//                sign = "x"
+//            case "÷":
+//                sign = "÷"
+//            default:
+//                break
+//            }
+//        }
+//    }
     
     
     
     @IBAction func clear(_ sender: UIButton) {
         display.text = "0"
-        sign = "null"
         userIsInTheMiddleOftyping = false
         ifPotIsExist = false
     }
     
     
-    @IBAction func equal(_ sender: UIButton) {
-        userIsInTheMiddleOftyping = false
-        if sign != "null" {
-            switch sign {
-            case "+":
-                displayValue = tem + displayValue
-            case "–":
-                displayValue = tem - displayValue
-            case "x":
-                displayValue = tem * displayValue
-            case "÷":
-                if displayValue == 0 {
-                    display.text = "ERROR"
-                }else {
-                    displayValue = tem / displayValue
-                }
-            default:
-                break
-            }
-            sign = "null"
-        }
-    }
+//    @IBAction func equal(_ sender: UIButton) {
+//        userIsInTheMiddleOftyping = false
+//        if sign != "null" {
+//            switch sign {
+//            case "+":
+//                displayValue = tem + displayValue
+//            case "–":
+//                displayValue = tem - displayValue
+//            case "x":
+//                displayValue = tem * displayValue
+//            case "÷":
+//                if displayValue == 0 {
+//                    display.text = "ERROR"
+//                }else {
+//                    displayValue = tem / displayValue
+//                }
+//            default:
+//                break
+//            }
+//            sign = "null"
+//        }
+//    }
     
 }
 
